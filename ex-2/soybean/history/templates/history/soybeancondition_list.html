@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soybean Conditions</title>
+    <style type="text/css">
+        td {margin: 1em;}
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Week ending</th>
+            <th>Condition</th>
+            <th>Average temperature</th>
+            <th>Grade</th>
+            <th>Inspector</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for condition in soybeancondition_list %}
+    <tr>
+        <td>{{ condition.week_ending }}</td>
+        <td>{{ condition.condition }}</td>
+        <td>{{ condition.average_temperature }}</td>
+        <td>{{ condition.grade }}</td>
+        <td>{{ condition.inspector }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</body>
+</html>
